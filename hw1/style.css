@@ -1,25 +1,23 @@
 body {
-	background-color: yellow;
-
 	font-family: 'Russo One', sans-serif;
 	font-size: 1.5em;
 }
 
 a {
 	text-decoration: none;
-	color: black;
+	color: #f3c269;
 }
 
 a:visited {
-    color: #cecece;
+    color: #4989e9;
 }
 
 a:active {
-    color: #ffff00;
+    color: #6a75ee;
 }
 
 .wrapper {
-	//background-color: blue;
+	background-color: #ece486;
 	width: 100%;
     height: 100%;
     position: fixed;
@@ -37,10 +35,26 @@ a:active {
 
 .round {
 	text-align: center;
-	line-height: 11;
+	line-height: 10.7;
 	width: 250px;
 	height: 250px;
-	background: gray;
+	background: #dbd7d7;
 	border-radius: 50%;
 	display: inline-block;
 	}
+
+.styled-select select {
+	font-family: 'Russo One', sans-serif;
+	font-size: 1.5em;
+   	background: transparent;
+   	width: 400px;
+   	padding: 5px;
+   	border: 1px solid #ccc;
+   	height: 70px;
+}
+
+.styled-select {
+   width: 400px;
+   height: 70px;
+   overflow: hidden;
+   background-color: #4398f5;
