@@ -55,3 +55,102 @@ body {
   	background-size: 2em 2em;
   	background-color: #fff;
 }
+
+/* Стили модального окна */
+
+.modal-header h2 {
+    color: #555;  
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1;    
+    margin: 0;
+}
+
+/* кнопка закрытия окна */
+.modal .btn-close {
+    color: #63ffd3;
+    cursor: pointer;
+    font-size: 40px;
+    text-decoration: none;
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
+
+.modal .btn-close:hover {
+    color: red;
+}
+
+/* слой затемнения */
+.modal-wrap:before {
+    content: "";
+    display: none;
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+}
+
+.modal-overlay {
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 102;
+}
+
+/* активация слоя затемнения и модального блока */
+.modal-open:checked ~ .modal-wrap:before,
+.modal-open:checked ~ .modal-wrap .modal-overlay {
+    display: block;
+}
+
+.modal-open:checked ~ .modal-wrap .modal-dialog {
+    transform: translate(-50%, 0);
+    top: 25%;
+}
+
+/* элементы модального окна */
+.modal-dialog {
+    background: #1ad2da;
+    border: none;
+    border-radius: 25px;
+    position: fixed;
+    width: 80%;
+    max-width: 500px;
+    left: 50%;
+    top: -100%;
+    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    transform: translate(-50%, -500%);
+    transition: transform 0.4s ease-out;
+    z-index: 103;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body p {
+    margin: 0;
+}
+
+.modal-header {
+    border-bottom: #6df8c1 solid 1px;
+    padding: 20px 20px;
+}
+
+.modal-header h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* адаптивные картинки в модальном блоке */
+.modal-body img { 
+    max-width: 100%;
+    height: auto;
+}

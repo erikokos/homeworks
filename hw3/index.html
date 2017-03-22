@@ -14,11 +14,27 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="header__button">
-						<a href="#"><label for="check"><input type="checkbox" class="check" name="check">DO IT!</label></a>
+						<a href="#"><label class="btn" for="modal-1">DO IT!</label></a>
 						</div>
 					</div>
 				</div>
 			</div>
+			<!-- Модальное окно -->
+					<div class="modal">
+					  <input class="modal-open" id="modal-1" type="checkbox" hidden>
+					  <div class="modal-wrap" aria-hidden="true" role="dialog">
+					    <label class="modal-overlay" for="modal-1"></label>
+					    <div class="modal-dialog">
+					      <div class="modal-header">
+					        <h2>MODAL WINDOW</h2>
+					        <label class="btn-close" for="modal-1" aria-hidden="true">×</label>
+					      </div>
+					      <div class="modal-body">
+					        <p>Здесь размещаете любое содержание...</p>
+					      </div>
+					    </div>
+					  </div>
+					</div>
 		</header>
 
 		<main>
